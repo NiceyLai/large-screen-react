@@ -1,5 +1,4 @@
-.x {
-  width: 24.4666666667vw;
-  height: 21vw;
-  border: 1px solid red;
+.home header {
+  height: 4.0909090909rem;
+  background-size: cover;
 }
