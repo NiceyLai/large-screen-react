@@ -1,0 +1,5 @@
+.x {
+  width: 24.4666666667vw;
+  height: 21vw;
+  border: 1px solid red;
+}
