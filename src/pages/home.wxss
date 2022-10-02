@@ -1,4 +1,41 @@
-.home header {
+.home {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home > header {
   height: 4.0909090909rem;
   background-size: cover;
+}
+
+.home > main {
+  flex: 1;
+  display: grid;
+  grid-template: "box1 box2 box4 box5" 755fr "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+}
+
+.home > main > .section1 {
+  grid-area: box1;
+  background: pink;
+}
+
+.home > main > .section2 {
+  grid-area: box2;
+  background: lightgray;
+}
+
+.home > main > .section3 {
+  grid-area: box3;
+  background: lightblue;
+}
+
+.home > main > .section4 {
+  grid-area: box4;
+  background: lightcyan;
+}
+
+.home > main > .section5 {
+  grid-area: box5;
+  background: lightyellow;
 }
