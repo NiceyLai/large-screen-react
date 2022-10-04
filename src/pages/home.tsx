@@ -7,11 +7,13 @@ export const Home = () => {
     <div className="home">
       <header  style={{backgroundImage:`url(${headerBg})` }}></header>
       <main>
-        <section className="section1"></section>
-        <section className="section2"></section>
-        <section className="section3"></section>
-        <section className="section4"></section>
-        <section className="section5"></section>
+        <section className="section1">
+          <div className="borderd 管辖统计"></div>
+        </section>
+        <section className="borderd section2"></section>
+        <section className="borderd section3"></section>
+        <section className="borderd section4"></section>
+        <section className="borderd section5"></section>
 
 
    </main>

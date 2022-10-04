@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .home {
   flex: 1;
   display: flex;
@@ -19,7 +20,7 @@
   grid-row-gap: 1.1570247934rem;
 }
 
-.home > main > section {
+.home > main .borderd {
   border: 1px solid #0764bc;
   border-radius: 4px;
   position: relative;
@@ -27,8 +28,8 @@
   background: #0c1139;
 }
 
-.home > main > section::before {
-  content: '';
+.home > main .borderd::before {
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -56,4 +57,8 @@
 
 .home > main > .section5 {
   grid-area: box5;
+}
+
+.home > main .管辖统计 {
+  height: 13.0165289256rem;
 }
