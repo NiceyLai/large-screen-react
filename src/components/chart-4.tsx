@@ -30,7 +30,7 @@ export const Chart4 = () => {
         }
       },
       series: [
-        { name: '故意伤人',
+        { 
         type: 'line',
           data: [0.15, 0.13, 0.12,0.13,0.14,0.16,0.18,0.25,0.27,0.28,0.26,0.20,0.14],  symbol: 'circle',
         symbolSize: px(8),

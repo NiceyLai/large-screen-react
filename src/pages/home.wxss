@@ -207,6 +207,16 @@
   justify-content: flex-start;
 }
 
+.home > main .年龄段-图1 .chart-图3, .home > main .年龄段-图2 .chart-图3 {
+  border: 1px solid #08397d;
+}
+
+.home > main .年龄段-图1 .chart-图3 h3, .home > main .年龄段-图2 .chart-图3 h3 {
+  font-size: 0.826446281rem;
+  color: #7ab6db;
+  margin-top: 0.2479338843rem;
+}
+
 .home > main .籍贯 {
   height: 31.1157024793rem;
   background: transparent;
