@@ -144,16 +144,57 @@
 .home > main .年龄段 > .charts {
   width: 100%;
   flex: 1;
-  border: 1px solid red;
   display: flex;
   padding: 1.2396694215rem;
 }
 
 .home > main .年龄段-图1, .home > main .年龄段-图2, .home > main .年龄段-图3 {
   flex: 1;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
+}
+
+.home > main .年龄段-图1 .legend {
+  height: 1.652892562rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home > main .年龄段-图1 .legend > span {
+  display: inline-block;
+  width: 1.652892562rem;
+  height: 0.826446281rem;
+  border-radius: 0.1652892562rem;
+  margin: 0 0.4132231405rem;
+}
+
+.home > main .年龄段-图1 .legend .male {
+  background: #33a4fa;
+}
+
+.home > main .年龄段-图1 .legend .female {
+  background: #8d70f8;
+}
+
+.home > main .年龄段-图1 .chart {
+  position: relative;
+  display: flex;
+}
+
+.home > main .年龄段-图1 .chart > .main {
+  flex: 1;
+}
+
+.home > main .年龄段-图1 .chart > .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #33a4fa;
+  font-size: 1.652892562rem;
+  text-shadow: 0 0 0.826446281rem #33a4fa;
+  font-weight: bold;
 }
 
 .home > main .籍贯 {
