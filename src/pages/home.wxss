@@ -87,6 +87,21 @@
 
 .home > main > .section5 {
   grid-area: box5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home > main > .section5 > .row1 {
+  height: 13.0991735537rem;
+}
+
+.home > main > .section5 > .row2 {
+  height: 13.0991735537rem;
+}
+
+.home > main > .section5 > .row3 {
+  height: 18.8016528926rem;
 }
 
 .home > main .管辖统计,
@@ -95,7 +110,10 @@
 .home > main .案发时段,
 .home > main .战果,
 .home > main .籍贯,
-.home > main .年龄段 {
+.home > main .年龄段,
+.home > main .案发类型,
+.home > main .案发街道,
+.home > main .作案手段 {
   height: 13.0165289256rem;
   display: flex;
   flex-direction: column;
@@ -108,7 +126,10 @@
 .home > main .案发时段 h2,
 .home > main .战果 h2,
 .home > main .籍贯 h2,
-.home > main .年龄段 h2 {
+.home > main .年龄段 h2,
+.home > main .案发类型 h2,
+.home > main .案发街道 h2,
+.home > main .作案手段 h2 {
   flex-shrink: 0;
   border: 1px solid #0a5299;
   border-bottom-left-radius: 4px;
@@ -119,13 +140,31 @@
   text-shadow: 0 0 0.1239669421rem white;
 }
 
+.home > main .管辖统计 .charts,
+.home > main .破获排名 .charts,
+.home > main .发案趋势 .charts,
+.home > main .案发时段 .charts,
+.home > main .战果 .charts,
+.home > main .籍贯 .charts,
+.home > main .年龄段 .charts,
+.home > main .案发类型 .charts,
+.home > main .案发街道 .charts,
+.home > main .作案手段 .charts {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
 .home > main .管辖统计 .chart,
 .home > main .破获排名 .chart,
 .home > main .发案趋势 .chart,
 .home > main .案发时段 .chart,
 .home > main .战果 .chart,
 .home > main .籍贯 .chart,
-.home > main .年龄段 .chart {
+.home > main .年龄段 .chart,
+.home > main .案发类型 .chart,
+.home > main .案发街道 .chart,
+.home > main .作案手段 .chart {
   flex: 1;
   width: 100%;
 }
@@ -142,9 +181,6 @@
 }
 
 .home > main .年龄段 > .charts {
-  width: 100%;
-  flex: 1;
-  display: flex;
   padding: 1.2396694215rem;
 }
 
