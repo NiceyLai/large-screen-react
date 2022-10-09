@@ -11,9 +11,24 @@
 .home > header {
   height: 4.0909090909rem;
   background-size: cover;
+  width: 100rem;
+  margin: 0 auto;
+}
+
+.home > footer {
+  height: 2.8099173554rem;
+  border: 1px solid #0d2d59;
+  margin: 0.826446281rem 0 1px;
+  border-radius: 4px;
+  background: #0c0d2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home > main {
+  width: 100rem;
+  margin: 0 auto;
   padding-top: 1.2396694215rem;
   flex: 1;
   display: grid;
