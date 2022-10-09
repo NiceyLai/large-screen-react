@@ -90,7 +90,8 @@
 .home > main .破获排名,
 .home > main .发案趋势,
 .home > main .案发时段,
-.home > main .战果 {
+.home > main .战果,
+.home > main .籍贯 {
   height: 13.0165289256rem;
   display: flex;
   flex-direction: column;
@@ -101,7 +102,8 @@
 .home > main .破获排名 h2,
 .home > main .发案趋势 h2,
 .home > main .案发时段 h2,
-.home > main .战果 h2 {
+.home > main .战果 h2,
+.home > main .籍贯 h2 {
   flex-shrink: 0;
   border: 1px solid #0a5299;
   border-bottom-left-radius: 4px;
@@ -116,7 +118,8 @@
 .home > main .破获排名 .chart,
 .home > main .发案趋势 .chart,
 .home > main .案发时段 .chart,
-.home > main .战果 .chart {
+.home > main .战果 .chart,
+.home > main .籍贯 .chart {
   flex: 1;
   width: 100%;
 }
@@ -124,6 +127,11 @@
 .home > main .发案趋势,
 .home > main .案发时段 {
   height: 15rem;
+}
+
+.home > main .籍贯 {
+  height: 31.1157024793rem;
+  background: transparent;
 }
 
 .home > main .战果 > table {
