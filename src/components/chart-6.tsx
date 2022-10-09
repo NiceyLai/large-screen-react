@@ -8,35 +8,12 @@ export const Chart6 = () => {
   const divRef = useRef(null);
   const colors = {'青海省': '#BB31F7', '甘肃省': '#15B8FD', '四川省': '#06E1EE'};
   useEffect(() => {
-    var myChart = echarts.init(divRef.current);
+     var myChart = echarts.init(divRef.current);
     // @ts-ignore
     echarts.registerMap('CN', china);
     myChart.setOption(createEchartsOptions({
       xAxis: {show: false},
-        yAxis: { show: false },
-       geo: {
-        show: true,
-        map: 'china',
-        label: {
-            normal: {
-                show: false
-            },
-            emphasis: {
-                show: false,
-            }
-        },
-        roam: false,
-        itemStyle: {
-            normal: {
-                areaColor: '#01215c',
-                borderWidth: 5,//设置外层边框
-                borderColor:'#9ffcff',
-                shadowColor: 'rgba(0,54,255, 1)',
-                shadowBlur: 150
-            }
-        }
-    },
-
+      yAxis: {show: false},
       series: [
         {
           type: 'map',
