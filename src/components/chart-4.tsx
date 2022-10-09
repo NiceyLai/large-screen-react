@@ -20,6 +20,9 @@ export const Chart4 = () => {
       yAxis: {
         splitLine: {lineStyle: {color: '#073E78'}},
         type: 'value',
+         min: 0,
+        max: 0.4,
+        interval: 0.05,
         axisLabel: {
           formatter(val) {
             return val * 100 + '%';
@@ -30,7 +33,7 @@ export const Chart4 = () => {
         { name: '故意伤人',
         type: 'line',
           data: [0.15, 0.13, 0.12,0.13,0.14,0.16,0.18,0.25,0.27,0.28,0.26,0.20,0.14],  symbol: 'circle',
-        symbolSize: px(12),
+        symbolSize: px(8),
         lineStyle: {width: px(2)},
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
@@ -48,7 +51,7 @@ export const Chart4 = () => {
 
   return (
     <div className="bordered 发案趋势">
-      <h2>发案趋势分析</h2>
+      <h2>案发时段分析</h2>
       <div ref={divRef} className="chart"/>
     </div>
   );

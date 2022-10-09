@@ -11,8 +11,8 @@ export const Chart3 = () => {
       legend: {
         bottom: px(10),
         textStyle: {color: 'white'},
-        itemWidth: px(30),
-        itemHeight: px(16)
+        itemWidth: px(26),
+        itemHeight: px(12)
       },
       grid: {
         x: px(20),

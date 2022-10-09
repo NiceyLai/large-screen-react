@@ -13,7 +13,30 @@ export const Chart6 = () => {
     echarts.registerMap('CN', china);
     myChart.setOption(createEchartsOptions({
       xAxis: {show: false},
-      yAxis: {show: false},
+        yAxis: { show: false },
+       geo: {
+        show: true,
+        map: 'china',
+        label: {
+            normal: {
+                show: false
+            },
+            emphasis: {
+                show: false,
+            }
+        },
+        roam: false,
+        itemStyle: {
+            normal: {
+                areaColor: '#01215c',
+                borderWidth: 5,//设置外层边框
+                borderColor:'#9ffcff',
+                shadowColor: 'rgba(0,54,255, 1)',
+                shadowBlur: 150
+            }
+        }
+    },
+
       series: [
         {
           type: 'map',
