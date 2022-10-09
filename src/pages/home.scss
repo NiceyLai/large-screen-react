@@ -38,7 +38,7 @@
     > section {
       text-align: center;
     }
-    .borderd {
+    .bordered {
       border: 1px solid #0764bc;
       border-radius: 4px;
       position: relative;
@@ -81,7 +81,8 @@
       grid-area: box5;
     }
     .管辖统计,
-    .破获排名 {
+    .破获排名,
+    .发案趋势 {
       height: px(315);
       display: flex;
       flex-direction: column;

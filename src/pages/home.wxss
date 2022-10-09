@@ -41,7 +41,7 @@
   text-align: center;
 }
 
-.home > main .borderd {
+.home > main .bordered {
   border: 1px solid #0764bc;
   border-radius: 4px;
   position: relative;
@@ -49,7 +49,7 @@
   background: #0c1139;
 }
 
-.home > main .borderd::before {
+.home > main .bordered::before {
   content: "";
   position: absolute;
   left: 0;
@@ -84,7 +84,8 @@
 }
 
 .home > main .管辖统计,
-.home > main .破获排名 {
+.home > main .破获排名,
+.home > main .发案趋势 {
   height: 13.0165289256rem;
   display: flex;
   flex-direction: column;
@@ -92,7 +93,8 @@
 }
 
 .home > main .管辖统计 h2,
-.home > main .破获排名 h2 {
+.home > main .破获排名 h2,
+.home > main .发案趋势 h2 {
   flex-shrink: 0;
   border: 1px solid #0a5299;
   border-bottom-left-radius: 4px;
@@ -104,7 +106,8 @@
 }
 
 .home > main .管辖统计 .chart,
-.home > main .破获排名 .chart {
+.home > main .破获排名 .chart,
+.home > main .发案趋势 .chart {
   flex: 1;
   width: 100%;
 }

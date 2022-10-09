@@ -3,6 +3,7 @@ import "./home.scss";
 import headerBg from "../images/header.png";
 import { Chart1 } from "../components/chart-1";
 import { Chart2 } from "../components/chart-2";
+import { Chart3 } from "../components/chart-3";
 
 export const Home = () => {
  const year = new Date().getFullYear();
@@ -14,11 +15,12 @@ export const Home = () => {
           <Chart1></Chart1>
           <Chart2></Chart2>
         </section>
-        <section className="borderd section2">
+        <section className=" section2">
+        <Chart3></Chart3>
         </section>
-        <section className="borderd section3"></section>
-        <section className="borderd section4"></section>
-        <section className="borderd section5"></section>
+        <section className="bordered section3"></section>
+        <section className="bordered section4"></section>
+        <section className="bordered section5"></section>
       </main>
        <footer>
         &copy; NiceyLai 2022-{year}
