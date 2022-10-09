@@ -303,25 +303,41 @@
   right: 0.4132231405rem;
 }
 
-.home > main .战果 > table {
-  margin-top: 1.5702479339rem;
+.home > main .战果,
+.home > main .作案手段 {
+  padding: 0 0.9917355372rem;
+}
+
+.home > main .战果 > table,
+.home > main .作案手段 > table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 1.0330578512rem;
   border-collapse: collapse;
 }
 
 .home > main .战果 > table th,
-.home > main .战果 > table td {
+.home > main .战果 > table td,
+.home > main .作案手段 > table th,
+.home > main .作案手段 > table td {
   border: 1px solid #1a3671;
 }
 
-.home > main .战果 > table thead th {
+.home > main .战果 > table thead th,
+.home > main .作案手段 > table thead th {
   height: 2.8925619835rem;
   box-shadow: inset 0 0 2.479338843rem 0 #1f3d85;
 }
 
-.home > main .战果 > table tbody td {
+.home > main .战果 > table tbody td,
+.home > main .作案手段 > table tbody td {
   height: 2.0661157025rem;
   width: 3.4710743802rem;
   background: #1c2456;
+}
+
+.home > main .作案手段 > table tbody td {
+  height: 1.0743801653rem;
 }
 
 .home > main .破获排名 {
