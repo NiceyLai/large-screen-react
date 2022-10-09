@@ -46,12 +46,13 @@
       background: #0f113a;
 
       &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        top: 0;
+          pointer-events: none;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
         border-radius: 4px;
         box-shadow: 17px 0 0 -16px #0e325f, -17px 0 0 -16px #0e325f,
           0 17px 0 -16px #0e325f, 0 -17px 0 -16px #0e325f, 9px 0 0 -8px #0d4483,

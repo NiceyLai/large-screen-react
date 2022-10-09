@@ -50,7 +50,8 @@
 }
 
 .home > main .bordered::before {
-  content: "";
+  pointer-events: none;
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
