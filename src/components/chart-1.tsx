@@ -10,14 +10,14 @@ export const Chart1 = () => {
    myChart.setOption(createEchartsOptions({
       xAxis: {
         data: [
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
-          "兰州新区",
+          "城关区",
+          "七里河区",
+          "西周区",
+          "安宁区",
+          "红谷区",
+          "永登区",
+          "滨海区",
+          "榆中区",
           "兰州新区",
         ],
         axisTick: { show: false },
@@ -51,7 +51,7 @@ export const Chart1 = () => {
         {
           type: "bar",
           barWidth: px(16), //柱图宽度
-          data: [10, 20, 36, 41, 15, 26, 37, 18, 29],
+          data: [40, 30, 26, 17, 23, 13, 19, 32, 38],
         },
       ],
     }));
