@@ -196,6 +196,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding-right: 0.4132231405rem;
 }
 
 .home > main .年龄段-图1 .legend > span, .home > main .年龄段-图2 .legend > span {
