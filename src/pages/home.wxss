@@ -130,3 +130,11 @@
   background: red;
   margin: 0 0.4132231405rem;
 }
+
+.home > main .破获排名 .legend .first {
+  background: linear-gradient(90deg, #2034f9 0%, #04a1ff 100%);
+}
+
+.home > main .破获排名 .legend .second {
+  background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
+}
