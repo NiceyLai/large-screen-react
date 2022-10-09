@@ -134,6 +134,44 @@
   background: transparent;
 }
 
+.home > main .籍贯 > .wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.home > main .籍贯 > .wrapper .chart {
+  flex: 1;
+}
+
+.home > main .籍贯 > .wrapper .legend {
+  position: absolute;
+  top: 1.652892562rem;
+  left: 0.826446281rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9090909091rem;
+  padding: 0.826446281rem 0.4132231405rem 0.826446281rem 0;
+  border-radius: 0;
+}
+
+.home > main .籍贯 > .wrapper .legend .icon {
+  margin: 0 0.4132231405rem;
+  display: inline-block;
+  width: 0.6611570248rem;
+  height: 0.6611570248rem;
+  border-radius: 50%;
+  background: #1cecd9;
+}
+
+.home > main .籍贯 > .wrapper .notes {
+  position: absolute;
+  bottom: 0.4132231405rem;
+  right: 0.4132231405rem;
+}
+
 .home > main .战果 > table {
   margin-top: 1.5702479339rem;
   border-collapse: collapse;
