@@ -1,4 +1,21 @@
 @charset "UTF-8";
+.home > main .年龄段-图1 .legend, .home > main .年龄段-图2 .legend, .home > main .chart11 .legend, .home > main .chart12 .legend {
+  height: 1.652892562rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 0.4132231405rem;
+}
+
+.home > main .年龄段-图1 .legend > span, .home > main .年龄段-图2 .legend > span, .home > main .chart11 .legend > span, .home > main .chart12 .legend > span {
+  display: inline-block;
+  width: 0.6611570248rem;
+  height: 0.4132231405rem;
+  border-radius: 0.0826446281rem;
+  margin: 0 0.4132231405rem;
+}
+
 .home {
   flex: 1;
   display: flex;
@@ -175,10 +192,18 @@
   height: 15rem;
 }
 
-.home > main .chart12 {
+.home > main .chart11, .home > main .chart12 {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+.home > main .chart11 > .chart, .home > main .chart12 > .chart {
+  display: flex;
+}
+
+.home > main .chart11 > .chart > .main, .home > main .chart12 > .chart > .main {
+  flex: 1;
 }
 
 .home > main .年龄段 {
@@ -195,23 +220,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-.home > main .年龄段-图1 .legend, .home > main .年龄段-图2 .legend {
-  height: 1.652892562rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-right: 0.4132231405rem;
-}
-
-.home > main .年龄段-图1 .legend > span, .home > main .年龄段-图2 .legend > span {
-  display: inline-block;
-  width: 0.6611570248rem;
-  height: 0.4132231405rem;
-  border-radius: 0.0826446281rem;
-  margin: 0 0.4132231405rem;
 }
 
 .home > main .年龄段-图1 .legend .male, .home > main .年龄段-图2 .legend .male {
