@@ -13,10 +13,10 @@ export const Chart7 = () => {
   
    useEffect(() => {
      setInterval(() => {
-       const number =Math.random();
+       const number = Math.random();
       const newData = [
-      { value:Number( number.toFixed(2)) , name: '女'},
-      { value: Number((1-number).toFixed(2)), name: '男'},
+      { value:number , name: '女'},
+      { value: 1-number, name: '男'},
       ];
       x(newData);
     }, 2000);
@@ -37,7 +37,7 @@ export const Chart7 = () => {
           label: {
             show: true, position: 'inside', textStyle: {color: 'white', fontSize: px(20)},
             formatter(options) {
-              return options.value * 100 + '%';
+              return (options.value* 100).toFixed(0)  + '%';
             }
           },
           labelLine: {show: false},
