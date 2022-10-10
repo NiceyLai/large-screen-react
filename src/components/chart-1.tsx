@@ -20,7 +20,7 @@ export const Chart1 = () => {
     useEffect(() => {
     setInterval(() => {
       const newData = [
-        {name: '城关区', 2011:  Math.random() * 100},
+    {name: '城关区', 2011:  Math.random() * 100},
     {name: '七里河区', 2011: Math.random() * 100},
     {name: '西固区', 2011: Math.random() * 100},
     {name: '安宁区', 2011:  Math.random() * 100},
@@ -71,6 +71,7 @@ export const Chart1 = () => {
       ],
     }));
   }
+
   useEffect(() => {
     myChart.current = echarts.init(divRef.current);
     x(data);

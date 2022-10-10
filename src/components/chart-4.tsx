@@ -5,13 +5,50 @@ import {px} from '../shared/px';
 
 export const Chart4 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current);
-    myChart.setOption(createEchartsOptions({
+   const myChart = useRef(null);
+  const data =
+    [{ name: '0', 2011: 0.15 },
+    { name: '2', 2011:0.13  },
+    { name: '4', 2011:  0.12},
+    { name: '6', 2011:   0.13},
+    { name: '8', 2011:  0.14},
+    { name: '10', 2011:  0.16},
+    { name: '12', 2011:   0.18},
+    { name: '14', 2011:   0.25},
+    { name: '16', 2011:   0.27},
+    { name: '18', 2011:  0.28},
+    { name: '20', 2011:   0.26},
+    { name: '22', 2011:   0.20},
+    { name: '24', 2011:  0.14},
+    ];
+  
+   useEffect(() => {
+    setInterval(() => {
+      const newData = [
+{ name: '0', 2011:  Math.random() },
+    { name: '2', 2011:  Math.random()  },
+    { name: '4', 2011:  Math.random()  },
+    { name: '6', 2011:  Math.random()  },
+    { name: '8', 2011:  Math.random()  },
+    { name: '10', 2011:  Math.random()  },
+    { name: '12', 2011:  Math.random()  },
+    { name: '14', 2011:  Math.random()  },
+    { name: '16', 2011:  Math.random()  },
+    { name: '18', 2011:  Math.random()  },
+    { name: '20', 2011:  Math.random()  },
+    { name: '22', 2011:  Math.random()  },
+    { name: '24', 2011:  Math.random()  },
+      ];
+      x(newData);
+    }, 2000);
+    }, []);
+  
+  const x = (data) => { 
+   myChart.current.setOption(createEchartsOptions({
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+          data: data.map(i => i.name),
           splitLine: {show: true, lineStyle: {color: '#073E78'}},
         axisTick: {show: false},
         axisLine: { show: false },
@@ -20,9 +57,6 @@ export const Chart4 = () => {
       yAxis: {
         splitLine: {lineStyle: {color: '#073E78'}},
         type: 'value',
-         min: 0,
-        max: 0.4,
-        interval: 0.05,
         axisLabel: {
           formatter(val) {
             return val * 100 + '%';
@@ -31,8 +65,10 @@ export const Chart4 = () => {
       },
       series: [
         { 
-        type: 'line',
-          data: [0.15, 0.13, 0.12,0.13,0.14,0.16,0.18,0.25,0.27,0.28,0.26,0.20,0.14],  symbol: 'circle',
+          type: 'line',
+          data: data.map(i => i[2011]),
+     
+          symbol: 'circle',
         symbolSize: px(8),
         lineStyle: {width: px(2)},
         areaStyle: {
@@ -46,6 +82,11 @@ export const Chart4 = () => {
         }
       }]
     }));
+  }
+
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data);
   }, []);
 
 
