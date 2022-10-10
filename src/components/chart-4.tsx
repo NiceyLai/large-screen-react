@@ -84,6 +84,7 @@ export const Chart4 = () => {
     }));
   }
 
+  
   useEffect(() => {
     myChart.current = echarts.init(divRef.current);
     x(data);

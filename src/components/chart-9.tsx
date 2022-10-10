@@ -5,23 +5,48 @@ import {px} from '../shared/px';
 
 export const Chart9 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current);
-    myChart.setOption(createEchartsOptions({
+    const myChart = useRef(null);
+  const data = [
+    { name: '0', 2011: 0.15 },
+    { name: '18', 2011:0.20  },
+    { name: '28', 2011:  0.26},
+    { name: '38', 2011:   0.35},
+    { name: '48', 2011:  0.28},
+    { name: '58', 2011: 0.21},
+    { name: '68', 2011: 0.08},
+    { name: '78', 2011: 0.06},
+  ];
+  
+   useEffect(() => {
+    setInterval(() => {
+      const newData = [
+    { name: '0', 2011:  Math.random() },
+    { name: '18', 2011: Math.random()  },
+    { name: '28', 2011:   Math.random()},
+    { name: '38', 2011:   Math.random()},
+    { name: '48', 2011:   Math.random()},
+    { name: '58', 2011:  Math.random()},
+    { name: '68', 2011:  Math.random()},
+    { name: '78', 2011:  Math.random()},
+      ];
+      x(newData);
+    }, 2000);
+    }, []);
+  
+  const x = (data) => {
+    myChart.current.setOption(createEchartsOptions({
       color: '#F7A110',
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: [0, 18, 28, 38, 48, 58, 68, 78],
+                data: data.map(i => i.name),
         splitLine: {show: true, lineStyle: {color: '#073E78'}},
         axisTick: {show: false},
         axisLine: {show: false},
       },
       yAxis: {
         type: 'value',
-             min: 0,
-        max: 0.4,
-        interval: 0.05,
+
         splitLine: {lineStyle: {color: '#073E78'}},
         axisLabel: {
           formatter(val) {
@@ -31,11 +56,7 @@ export const Chart9 = () => {
       },
       series: [{
         type: 'line',
-        data: [
-          0.19, 0.20, 0.26,
-          0.35, 0.26, 0.20,
-          0.08, 0.06
-        ],
+              data: data.map(i => i[2011]),
         symbol: 'circle',
         symbolSize: px(8),
         lineStyle: {width: px(2)},
@@ -50,11 +71,16 @@ export const Chart9 = () => {
         }
       }]
     }));
+   }
+
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data);
   }, []);
 
   return (
     <div className="年龄段-图3">
-      <h3>犯罪年龄趋势图</h3>
+      <h2>犯罪年龄趋势图</h2>
       <div ref={divRef} className="chart">
 
       </div>
