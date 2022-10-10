@@ -32,7 +32,7 @@ export const Chart7 = () => {
         {
           name: '访问来源',
           type: 'pie',
-          radius: ['75%', '90%'],
+          radius: ['75%', '100%'],
           avoidLabelOverlap: false,
           label: {
             show: true, position: 'inside', textStyle: {color: 'white', fontSize: px(20)},
