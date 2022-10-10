@@ -30,7 +30,7 @@ export const Chart2 = () => {
     {name: '新区公安局', 2011:  Math.random() * 10, 2012:  Math.random() * 10},
       ];
       x(newData);
-    }, 1000);
+    }, 2000);
   }, []);
   const x = (data) => {
     myChart.current.setOption(createEchartsOptions({

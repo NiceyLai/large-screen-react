@@ -4,22 +4,40 @@ import { px } from '../shared/px';
 import { createEchartsOptions } from '../shared/create-echarts-options';
 
 export const Chart1 = () => {
-      const divRef = useRef(null);
-  useEffect(() => {
-    var myChart = echarts.init(divRef.current);
-   myChart.setOption(createEchartsOptions({
+  const divRef = useRef(null);
+  const myChart = useRef(null);
+  const data =
+    [{ name: '城关区', 2011: 90 },
+    { name: '七里河区', 2011: 30 },
+    { name: '西固区', 2011: 56 },
+    { name: '安宁区', 2011: 88 },
+    { name: '红古区', 2011: 83 },
+    { name: '永登县', 2011: 43 },
+    { name: '皋兰县', 2011: 29 },
+    { name: '榆中县', 2011: 52 },
+    { name: '新区', 2011: 38 },
+    ];
+    useEffect(() => {
+    setInterval(() => {
+      const newData = [
+        {name: '城关区', 2011:  Math.random() * 100},
+    {name: '七里河区', 2011: Math.random() * 100},
+    {name: '西固区', 2011: Math.random() * 100},
+    {name: '安宁区', 2011:  Math.random() * 100},
+    {name: '红古区', 2011:  Math.random() * 100},
+    {name: '永登县', 2011:  Math.random() * 100 },
+    {name: '皋兰县', 2011:  Math.random() * 100 },
+    {name: '榆中县', 2011:  Math.random() * 100 },
+    {name: '新区', 2011:  Math.random() * 100},
+      ];
+      x(newData);
+    }, 2000);
+    }, []);
+  
+  const x = (data) => { 
+  myChart.current.setOption(createEchartsOptions({
       xAxis: {
-        data: [
-          "城关区",
-          "七里河区",
-          "西周区",
-          "安宁区",
-          "红谷区",
-          "永登区",
-          "滨海区",
-          "榆中区",
-          "兰州新区",
-        ],
+              data: data.map(i => i.name),
         axisTick: { show: false },
         axisLine: {
           lineStyle: { color: "#083B70" },
@@ -38,9 +56,6 @@ export const Chart1 = () => {
       },
       yAxis: {
         splitLine: { show: false },
-        min: 0,
-        max: 40,
-        interval: 5,
         axisLine: {
           show: true,
           lineStyle: { color: "#083B70" },
@@ -51,11 +66,16 @@ export const Chart1 = () => {
         {
           type: "bar",
           barWidth: px(16), //柱图宽度
-          data: [40, 30, 26, 17, 23, 13, 19, 32, 38],
+          data: data.map(i => i[2011]),
         },
       ],
     }));
+  }
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data);
   }, []);
+
     return (
     <div className="bordered 管辖统计">
             <h2>案发派出所管辖统计</h2>
