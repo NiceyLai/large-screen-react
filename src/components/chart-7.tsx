@@ -19,7 +19,7 @@ export const Chart7 = () => {
       { value: 1-number, name: '男'},
       ];
       x(newData);
-    }, 2000);
+    }, 1000);
     }, []);
   
   const x = (data) => {

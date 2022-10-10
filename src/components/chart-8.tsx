@@ -6,7 +6,6 @@ import { px } from '../shared/px';
 export const Chart8 = () => {
   const divRef = useRef(null);
    const colors = ['#856BED', '#F46064', '#F38E1C', '#1CDB7C', '#33A4FA'];
-  
      const myChart = useRef(null);
   const data = [
             {value: 0.07, name: '10-20'},
@@ -26,7 +25,7 @@ export const Chart8 = () => {
             {value: Math.random(), name: '50-60'},
       ];
       x(newData);
-    }, 2000);
+    }, 1000);
    }, []);
   
   const x = (data) => { 

@@ -1,12 +1,12 @@
 import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
+import { px } from '../shared/px';
 
 export const Chart10 = () => {
   const divRef = useRef(null);
   const myChart = useRef(null);
-  const data =
-    
+  const data = 
     [{ name: '入室抢劫', 2011: 40 },
     { name: '当街偷盗', 2011: 22 },
     { name: '团伙诈骗', 2011: 20 },
@@ -23,7 +23,7 @@ export const Chart10 = () => {
     { name: '民事案件', 2011: Math.random() * 100 },
       ];
       x(newData);
-    }, 2000);
+    }, 1000);
     }, []);
   
   const x = (data) => { 
@@ -56,8 +56,8 @@ export const Chart10 = () => {
       },
       series: [{
         type: 'bar',
+          barWidth: px(30), //柱图宽度
           data: data.map(i => i[2011]),
-    
         color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
           offset: 0,
           color: '#0A67FF'

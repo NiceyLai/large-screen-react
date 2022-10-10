@@ -31,7 +31,7 @@ export const Chart1 = () => {
     {name: '新区', 2011:  Math.random() * 100},
       ];
       x(newData);
-    }, 2000);
+    }, 1000);
     }, []);
   
   const x = (data) => { 

@@ -30,7 +30,7 @@ export const Chart9 = () => {
     { name: '78', 2011:  Math.random()},
       ];
       x(newData);
-    }, 2000);
+    }, 1000);
     }, []);
   
   const x = (data) => {
