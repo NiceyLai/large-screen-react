@@ -5,9 +5,25 @@ import { px } from '../shared/px';
 
 export const Chart7 = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-      var myChart = echarts.init(divRef.current);
-      myChart.setOption(createEchartsOptions({
+   const myChart = useRef(null);
+  const data =[
+      { value: 0.2, name: '女'},
+      { value: 0.8, name: '男'},
+    ];
+  
+   useEffect(() => {
+     setInterval(() => {
+       const number =Math.random();
+      const newData = [
+      { value:Number( number.toFixed(2)) , name: '女'},
+      { value: Number((1-number).toFixed(2)), name: '男'},
+      ];
+      x(newData);
+    }, 2000);
+    }, []);
+  
+  const x = (data) => {
+      myChart.current.setOption(createEchartsOptions({
           color: ['#8D70F8', '#33A4FA'],
       xAxis: {show: false},
       yAxis: {show: false},
@@ -29,14 +45,17 @@ export const Chart7 = () => {
             borderColor: '#0F113A',
             borderWidth: px(4)
           },
-          data: [
-            {value: 0.2, name: '女'},
-            {value: 0.8, name: '男'},
-          ]
+            data: data.map(({ value, name}) => ({ value, name })),
         }
       ]
       }))
+
+   }
+  useEffect(() => {
+    myChart.current = echarts.init(divRef.current);
+    x(data);
   }, []);
+
 
   return (
       <div className="年龄段-图1">
